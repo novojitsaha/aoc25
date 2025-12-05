@@ -16,7 +16,8 @@ size_t getMaxJoltage(std::string inputFile)
 
     std::string line;
 
-    // t: n lines -> O(n); s: O(n)
+    // t: n lines -> O(n); s: O(1) since the stack is strictly 
+    // decreasing and therefore holds values between 1 and 9
     while (std::getline(inFile, line))
     {
         std::vector<int> vec;
